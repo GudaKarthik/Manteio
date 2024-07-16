@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#4003A9F4"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="80dp"
+        android:id="@+id/cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko_bold"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:id="@+id/invoiceNumber"
+                android:text="Inovice Number" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RVDEF/23-24/INV1614"
+                android:textSize="12dp"
+                android:fontFamily="@font/amiko"
+                android:background="@drawable/edt_bg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:backgroundTint="#12000000"
+                android:id="@+id/edtInvoiceNumber"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="14dp"
+                android:id="@+id/amountPaid"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="210"
+                android:textSize="12dp"
+                android:background="@drawable/edt_bg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/amiko"
+                android:backgroundTint="#12000000"
+                android:id="@+id/edtAmountPaid"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paid On"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="14dp"
+                android:id="@+id/paidOn"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DD/MM/YYYY"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edt_bg"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/amiko"
+                android:textColor="#75000000"
+                android:id="@+id/edtPaidOn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Mode"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/amiko_bold"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:id="@+id/paymentMode"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroupOne">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Net Banking "
+                    android:fontFamily="@font/amiko"
+                    android:textSize="13dp"
+                    android:textColor="@color/graytext"
+                    android:id="@+id/radioBtnnetbanking"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="UPI"
+                    android:layout_toRightOf="@id/radioBtnnetbanking"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/graytext"
+                    android:id="@+id/Radiobtnupi"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Cheque"
+                        android:textColor="@color/graytext"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/amiko"
+                        android:layout_below="@id/radioBtnnetbanking"
+                        android:id="@+id/RadiobtnCheque"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Cash"
+                        android:layout_toRightOf="@id/radioBtnnetbanking"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/Radiobtnupi"
+                        android:fontFamily="@font/amiko"
+                        android:textColor="@color/graytext"
+                        android:textSize="13dp"/>
+
+                </RelativeLayout>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction Number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:id="@+id/transactionNumber"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Number"
+                android:textColor="@color/graytext"
+                android:fontFamily="@font/amiko"
+                android:textSize="12dp"
+                android:background="@drawable/edt_bg"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edtEnterNumber"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:id="@+id/remarks"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write your remarks"
+                android:textSize="12dp"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/graytext"
+                android:background="@drawable/edt_bg"
+                android:paddingLeft="5dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edtRemarks"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attach Reference*"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/amiko_bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:id="@+id/attachReference"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Upload"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/baseline_file_upload_24"
+                    android:drawableTint="#004a8e"
+                    android:textColor="#004a8e"
+                    android:background="@drawable/upload_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/btnUpload"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:background="@drawable/cancel_bg"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/save"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:id="@+id/btnCancel"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:text="Save"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/cancel_bg"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/save"
+                    android:id="@+id/btnSave"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

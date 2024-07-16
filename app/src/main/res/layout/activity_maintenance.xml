@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F2F6"
+    tools:context=".MaintenanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnBack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maintenance"
+            android:layout_toRightOf="@id/btnBack"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:fontFamily="@font/amiko"
+            android:id="@+id/maintenanceToolbar"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/white"
+        android:id="@+id/cardviewM">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dues"
+                android:backgroundTint="#C3004A8E"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:fontFamily="@font/amiko_semibold"
+                android:id="@+id/btnDues"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/amiko_semibold"
+                android:id="@+id/btnHistory"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_search_24"
+            android:background="@drawable/search_bg"
+            android:paddingRight="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imgSearch"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/monthcard"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_centerVertical="true"
+                android:id="@+id/monthSpinner"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_keyboard_arrow_down_24"
+                    android:tint="#6A000000"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/monthSpinner"/>
+
+</RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/yearSpinner"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_keyboard_arrow_down_24"
+                    android:tint="#5E000000"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/yearSpinner"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select All"
+        android:layout_gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiko"
+        android:textSize="14dp"
+        android:textColor="@color/save"
+        android:id="@+id/txtselectAll"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/amiko_bold"
+                    android:text="Water"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/imgSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/baseline_domain_verification_24"
+                    android:tint="@color/save" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/maintenanceInvoicenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textSize="13dp"
+                    android:text="Invoice Number: "
+                    android:textColor="@color/graytext" />
+
+                <TextView
+                    android:id="@+id/txtInvoiceNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:textSize="13dp"
+                    android:text="RVDEF/23-24/INV1614"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/maintenanceInvoiceperiod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textSize="13dp"
+                    android:text="Invoice Period: "
+                    android:textColor="@color/graytext" />
+
+                <TextView
+                    android:id="@+id/txtInvoicePeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:text="February 2024"
+                    android:textSize="13dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dueinformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko_semibold"
+                android:textSize="13dp"
+                android:text="Due Information"
+                android:textColor="#A1000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/date_bg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/amiko"
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_calendar_month_24"
+                        android:textColor="@color/graytext"
+                        android:tint="#FF9800" />
+
+                    <TextView
+                        android:id="@+id/txtInvoiceDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/amiko_semibold"
+                        android:textSize="12dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="10dp"
+                        android:text="27/02/2024"
+                        android:textColor="#FF9800" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/amount_bg"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="2dp"
+                    android:text="₹ 1,446.00 "
+                    android:textColor="#E34236" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/baseline_download_24"
+                    android:tint="@color/graytext" />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/imgDownload"
+                    android:src="@drawable/baseline_share_24"
+                    android:tint="@color/graytext" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPayNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edt_bg"
+                    android:backgroundTint="#4A000000"
+                    android:fontFamily="@font/amiko"
+                    android:text="Pay Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPaidStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/btnPayNow"
+                    android:background="@drawable/edt_bg"
+                    android:fontFamily="@font/amiko"
+                    android:layout_marginBottom="15dp"
+                    android:text="Paid ⍰"
+                    android:textAllCaps="false"
+                    android:textColor="@color/graytext" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 3,846.00"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="22dp"
+                android:fontFamily="@font/amiko_bold"
+                android:id="@+id/txtTotalmaintenanceAmont"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Bills Amount"
+                android:layout_below="@id/txtTotalmaintenanceAmont"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/graytext"
+                android:fontFamily="@font/amiko"
+                android:id="@+id/txtselectedBillAmounts"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay Now"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cancel_bg"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/save"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/amiko_bold"
+                android:textSize="16dp"
+                android:id="@+id/btnPayTotalAmount"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
